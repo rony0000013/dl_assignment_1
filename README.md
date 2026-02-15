@@ -7,7 +7,7 @@ This repository contains implementation for CNN stress-testing assignment on CIF
 - **Student 1**: Rounak Sen
 - **Student 2**: Dishant Nibedit
 - **Student 3**: Arghya Jana
-- **Student 4**: Kaushik Kumar Das  
+- **Student 4**: Koushik Kumar Das  
 
 ## Project Overview
 
@@ -143,24 +143,3 @@ conda install pytorch torchvision matplotlib numpy opencv -c pytorch
 - No external pretrained weights used
 - Adam optimizer with weight decay for better generalization
 
-## Notes
-
-- The CIFAR-10 dataset will be automatically downloaded to the `data/` directory
-- GPU is recommended for faster training
-- All visualizations are saved as high-resolution PNG files
-- The analysis report provides key insights and reflections
-- Grad-CAM heatmaps are properly resized to match input image dimensions
-
-## Assignment Requirements Met
-
-✅ Dataset: CIFAR-10 (official train-test split)  
-✅ Architecture: ResNet-18 (custom implementation)  
-✅ Fixed random seed: 42  
-✅ Baseline training with metrics  
-✅ 3+ failure cases with analysis  
-✅ Explainability techniques (Grad-CAM)  
-✅ Single constrained improvement (data augmentation)  
-✅ Comprehensive analysis and reflection  
-✅ Reproducible codebase  
-
-For questions or issues, refer to the detailed comments within the notebook cells.
