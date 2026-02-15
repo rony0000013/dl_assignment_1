@@ -68,7 +68,7 @@ conda install pytorch torchvision matplotlib numpy opencv -c pytorch
    - Cell 9: Constrained improvement (enhanced data augmentation)
    - Cell 10: Model comparison
    - Cell 11: Failure analysis comparison
-   - Cell 12: Final analysis report generation
+   - Cell 12: Confusion matrix generation and analysis
 
 3. **Expected Runtime**:
    - Training: ~30-45 minutes on GPU, ~2-3 hours on CPU
@@ -93,6 +93,13 @@ conda install pytorch torchvision matplotlib numpy opencv -c pytorch
 - Overlays help understand model reasoning
 - Proper image resizing for accurate localization
 
+### Confusion Matrix Analysis
+- Comprehensive confusion matrix generation for both baseline and improved models
+- Visual analysis of class-wise prediction patterns
+- High-resolution heatmaps with class labels
+- Identifies commonly confused classes (e.g., bird↔dog, airplane↔ship)
+- Saves confusion matrices as PNG files for detailed examination
+
 ### Constrained Improvement
 - Single modification: Enhanced data augmentation
 - Includes RandomCrop, RandomHorizontalFlip, RandomRotation, ColorJitter, RandomErasing
@@ -103,6 +110,8 @@ conda install pytorch torchvision matplotlib numpy opencv -c pytorch
 - **training_curves.png**: Loss and accuracy progression
 - **model_comparison.png**: Baseline vs improved model performance
 - **failure_case_*.png**: Visual analysis of top 3 failure cases
+- **confusion_matrix_baseline_model.png**: Confusion matrix for baseline model
+- **confusion_matrix_improved_model.png**: Confusion matrix for improved model
 - **analysis_report.txt**: Comprehensive findings and insights
 
 ## Experimental Results
@@ -114,8 +123,8 @@ conda install pytorch torchvision matplotlib numpy opencv -c pytorch
 
 ### Improved Model Performance
 - **Test Accuracy**: 91.75%
-- **High-Confidence Failures**: 404 cases
-- **Failure Reduction**: 487 fewer high-confidence failures
+- **High-Confidence Failures**: 418 cases
+- **Failure Reduction**: 468 fewer high-confidence failures
 - **Better Generalization**: Reduced overfitting through data augmentation
 
 ### Key Findings
@@ -123,6 +132,8 @@ conda install pytorch torchvision matplotlib numpy opencv -c pytorch
 2. **Failure patterns**: Most failures involved visually similar classes (bird↔dog, airplane↔ship)
 3. **Model confidence**: High confidence even in incorrect predictions
 4. **Attention patterns**: Grad-CAM revealed focus on both relevant and background regions
+5. **Class confusion analysis**: Confusion matrices reveal systematic misclassifications between similar classes
+6. **Improved model robustness**: Better diagonal dominance in confusion matrix indicating improved class discrimination
 
 ## Reproducibility
 
